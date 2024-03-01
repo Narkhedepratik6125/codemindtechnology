@@ -1,0 +1,20 @@
+<!-- <form (ngSubmit)="search(query)">
+  <input type="text" name="query" [(ngModel)]="query" placeholder="Enter your search query">
+  <button type="submit">Search</button>
+</form> -->
+
+<form (ngSubmit)="search($event)"> <!-- Pass $event -->
+  <input type="text" name="query" [(ngModel)]="query" placeholder="Enter your search query">
+  <button type="submit">Search</button>
+</form>
+
+<ul>
+  <li *ngFor="let result of searchResults">
+    {{ result.title }}    
+    <img [src]="result.image">
+  </li>
+</ul>
+
+<div>
+  <app-recipeinformation></app-recipeinformation>
+</div>
