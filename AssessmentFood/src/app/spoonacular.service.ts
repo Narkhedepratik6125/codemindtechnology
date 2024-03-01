@@ -9,6 +9,7 @@ export class SpoonacularService {
 
   private apiKey = 'efb0ff4091ce4fe38a0d4bf8e6555559';
   private baseUrl = 'https://api.spoonacular.com';
+  getAnalyzedInstructions: any;
 
   constructor(private http: HttpClient) { }
 
