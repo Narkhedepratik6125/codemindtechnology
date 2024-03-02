@@ -13,6 +13,20 @@ export class SpoonacularService {
 
   constructor(private http: HttpClient) { }
 
+  // searchRecipes(searchText: string): Observable<any> {
+  //   const url = `${this.baseUrl}/recipes/complexSearch?query=${searchText}&number=5&apiKey=${this.apiKey}`;
+  //   return this.http.get(url);
+  // }
+
+  // getRecipeInformation(id: number): Observable<any> {
+  //   const url = `${this.baseUrl}/recipes/${id}/information?includeNutrition=false&apiKey=${this.apiKey}`;
+  //   return this.http.get(url);
+  // }
+
+  // getRecipeInstructions(id: number): Observable<any> {
+  //   const url = `${this.baseUrl}/recipes/${id}/analyzedInstructions?apiKey=${this.apiKey}`;
+  //   return this.http.get(url);
+  // }
   searchRecipes(searchText: string): Observable<any> {
     const url = `${this.baseUrl}/recipes/complexSearch?query=${searchText}&number=5&apiKey=${this.apiKey}`;
     return this.http.get(url);
@@ -23,8 +37,7 @@ export class SpoonacularService {
     return this.http.get(url);
   }
 
-  getRecipeInstructions(id: number): Observable<any> {
-    const url = `${this.baseUrl}/recipes/${id}/analyzedInstructions?apiKey=${this.apiKey}`;
-    return this.http.get(url);
-  }
+
+
+
 }

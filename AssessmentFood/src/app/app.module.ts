@@ -27,11 +27,15 @@ import { FormsModule } from '@angular/forms'; // Import FormsModule
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RecipeinformationComponent } from './recipeinformation/recipeinformation.component';
+import { InstructionsnComponent } from './instructionsn/instructionsn.component';
+import { SearchResultComponent } from './search-result/search-result.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RecipeinformationComponent
+    RecipeinformationComponent,
+    InstructionsnComponent,
+    SearchResultComponent
   ],
   imports: [
     BrowserModule,

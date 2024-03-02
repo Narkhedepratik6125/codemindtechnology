@@ -51,29 +51,7 @@ export class AppComponent {
   //   });
   // }
 
-  search(event: Event) {
-    event.preventDefault();
-    if (this.query.trim() === '') {
-      return;
-    }
-    this.searchService.search(this.query).subscribe((data: any) => {
-      this.searchResults = data.results;
-    });
-  }
 
-  getRecipeInformation(recipeId: number) {
-    this.spoonacularService
-      .getRecipeInformation(recipeId)
-      .subscribe((data: any) => {
-        this.searchResults = data.results; // Handle the response data
-      });
-  }
+  
 
-  getAnalyzedInstructions(recipeId: number) {
-    this.spoonacularService
-      .getAnalyzedInstructions(recipeId)
-      .subscribe((data: any) => {
-        this.searchResults = data.results; // Handle the response data
-      });
-  }
 }
