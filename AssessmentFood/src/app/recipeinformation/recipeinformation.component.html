@@ -1,10 +1,5 @@
 <p>recipeinformation works!</p>
-<!-- 
-<div *ngIf="recipeData">
-    <h1>{{ recipeData.title }}</h1>
-    <p>{{ recipeData.summary }}</p>
-  </div>
-   -->
+
    
 <form (ngSubmit)="searchRecipes($event)"> <!-- Pass $event -->
   <input type="text" name="query" [(ngModel)]="query" placeholder="Enter your search query">
@@ -12,7 +7,7 @@
 </form>
 
 
-   <div *ngFor="let recipe of recipes">
+  <div *ngFor="let recipe of recipes">
     <h3>{{ recipe.title }}</h3>
     <img [src]="recipe.image" alt="Recipe Image">
     <p>{{ recipe.summary }}</p>
