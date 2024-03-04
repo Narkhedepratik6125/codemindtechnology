@@ -21,4 +21,11 @@ export class SpoonacularService {
     const url = `${this.baseUrl}/recipes/${id}/information?includeNutrition=false&apiKey=${this.apiKey}`;
     return this.http.get(url);
   }
+
+  getInstructions(id: number): Observable<any> {
+    const url = `${this.baseUrl}/recipes/${id}/instructions?includeNutrition=false&apiKey=${this.apiKey}`;
+    return this.http.get(url);
+  }
+
+  
 }
